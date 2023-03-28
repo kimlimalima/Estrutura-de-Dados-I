@@ -9,6 +9,7 @@ int main() {
     total = *intPointer;
     total = 25;
     delete intPointer;
+    
     cout << total << endl << *intPointer << endl;
     return 0;
 }
