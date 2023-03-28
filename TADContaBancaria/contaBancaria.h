@@ -4,3 +4,6 @@ typedef struct{
 } contaBancaria;
 
 contaBancaria inicializa(int, double);
+void deposito(contaBancaria *, double);
+void saque(contaBancaria *, double);
+void print(contaBancaria);
