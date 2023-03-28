@@ -2,9 +2,10 @@
 #include <string>
 #include "contaBancaria.h"
 
-using namespace std;
+using std::cout, std::cin, std::endl;
 
-int main(){
+int main()
+{
     contaBancaria conta;
     conta = inicializa(10,10000);
     cout << "Antes da movimentação " << endl;

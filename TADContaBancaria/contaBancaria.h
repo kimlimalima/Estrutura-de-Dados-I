@@ -1,4 +1,5 @@
-typedef struct{
+typedef struct
+{
     int numeroConta;
     double saldoConta;
 } contaBancaria;
