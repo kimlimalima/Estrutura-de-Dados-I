@@ -1,16 +1,18 @@
 #include <iostream>
 
-using std::cout, std::endl;
+using std::cout;
 
 #include "NumeroComplexo.h"
-#include "NumeroComplexo.cpp"
+// #include "NumeroComplexo.cpp"
 
 int main()
 {
-    NumeroComplexo a;
+    NumeroComplexo numeroA;
     numeroA = inicializar(2,5);
 
-    cout << "Numero: "<< print(numeroA) << endl;
+    cout << "Numero: ";
+    print(numeroA);
+    cout << "\n";
 
     return 0;
 }

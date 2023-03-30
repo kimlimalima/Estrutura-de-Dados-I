@@ -37,5 +37,5 @@ NumeroComplexo soma(NumeroComplexo numeroA, NumeroComplexo numeroB)
 
 int ehReal(NumeroComplexo numero)
 {
-    return numero.numeroImaginario == 0;
+    return numero.numeroImaginario == 0;    
 }

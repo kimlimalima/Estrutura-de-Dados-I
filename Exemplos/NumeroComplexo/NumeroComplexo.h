@@ -7,7 +7,7 @@ typedef struct
 
 NumeroComplexo inicializar(int, int);
 
-int print(NumeroComplexo);
-int copy(NumeroComplexo*, NumeroComplexo);
+void print(NumeroComplexo);
+void copy(NumeroComplexo*, NumeroComplexo);
 NumeroComplexo soma(NumeroComplexo, NumeroComplexo);
 int ehReal(NumeroComplexo);
