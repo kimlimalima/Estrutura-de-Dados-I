@@ -2,7 +2,8 @@
 
 using std::cout, std::endl;
 
-int main() {
+int main()
+{
     // Write C++ code here
     int a = 20;
     // criando variávle que irá receber o endereço de memória de outra variável

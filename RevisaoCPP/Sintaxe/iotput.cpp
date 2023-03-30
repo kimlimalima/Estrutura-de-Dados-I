@@ -8,7 +8,8 @@ char sexo;
 double contaBancaria;
 float scoreSerasa;
 
-int main() {
+int main()
+{
 
   // Output
   cout << "Qual teu nome?" << endl;
