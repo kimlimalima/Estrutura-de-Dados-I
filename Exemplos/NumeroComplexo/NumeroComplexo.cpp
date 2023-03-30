@@ -1,8 +1,9 @@
 #include <iostream>
 
+#include "NumeroComplexo.h"
+
 using std::cout, std::endl;
 
-#include "NumeroComplexo.h"
 
 NumeroComplexo inicializar(int numeroReal, int numeroImaginario)
 {
@@ -16,7 +17,7 @@ NumeroComplexo inicializar(int numeroReal, int numeroImaginario)
 void print(NumeroComplexo numero)
 {
     cout << "Numero Real: " << numero.numeroReal << endl;
-    cout << "Numero imaginário: " << numero.numeroImaginario;
+    cout << "Numero imaginário: " << numero.numeroImaginario << endl;
 }
 
 void copy(NumeroComplexo* ponteiro, NumeroComplexo src)
