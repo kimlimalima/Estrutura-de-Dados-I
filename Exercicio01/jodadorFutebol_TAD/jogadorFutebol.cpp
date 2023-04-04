@@ -17,30 +17,40 @@ jogadorFutebol inicializar(string nomeJogador, int jogos, int gols, int assisten
 
 }
 
-void nomeJogador(jogadorFutebol *jogador, string nomeJogador)
+void atribuiNome(jogadorFutebol *jogador, string nomeJogador)
 {
-    jogador->nomeJogador = nomeJogador;
+    jogador->nomeJogador += nomeJogador;
 }
 
-void jogos(jogadorFutebol *jogador, int jogos)
+void atribuiJogos(jogadorFutebol *jogador, int jogos)
 {
-    jogador->jogos = jogos;
+    jogador->jogos += jogos;
 }
 
-void gols(jogadorFutebol *jogador, int gols)
+void atribuiGol(jogadorFutebol *jogador, int gols)
 {
-    jogador->gols = gols;
+    jogador->gols += gols;
 }
 
-void assistencias(jogadorFutebol *jogador, int assistencias)
+void atribuiAssistencias(jogadorFutebol *jogador, int assistencias)
 {
-    jogador->assistencias = assistencias;
+    jogador->assistencias += assistencias;
 }
 
-void print(jogadorFutebol jogagor)
+void print(jogadorFutebol jogador)
 {
-    cout << "Nome: " << jogagor.nomeJogador << "\n";
-    cout << "Jogos: " << jogagor.jogos << "\n";
-    cout << "Gols: " << jogagor.gols << "\n";
-    cout << "Assistencias: " << jogagor.assistencias << "\n";
+    cout << "Nome: " << jogador.nomeJogador << "\n";
+    cout << "Jogos: " << jogador.jogos << "\n";
+    cout << "Gols: " << jogador.gols << "\n";
+    cout << "Assistencias: " << jogador.assistencias << "\n";
+    cout << "Qualidade: " << ehBom(jogador.jogos, jogador.gols,jogador.assistencias) << "\n";
+}
+
+string ehBom(int jogos, int gols, int assistencias, double qualidade, string qualidadeJogador)
+{
+    qualidade = gols + assistencias/jogos;
+
+    if (qualidade > 50.0) return qualidadeJogador="Bom";
+
+    return qualidadeJogador;
 }

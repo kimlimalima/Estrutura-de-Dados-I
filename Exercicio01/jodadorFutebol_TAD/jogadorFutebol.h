@@ -9,6 +9,7 @@ typedef struct{
     int jogos;
     int gols;
     int assistencias;
+    double qualidade;
 
 } jogadorFutebol;
 
@@ -19,6 +20,6 @@ void atribuiJogos(jogadorFutebol *, int);
 void atribuiGol(jogadorFutebol *, int);
 void atribuiAssistencias(jogadorFutebol *, int);
 
-void ehBom(int, int, int);
+string ehBom(int, int, int, double=0.0, string="Ruim");
 
 void print(jogadorFutebol);

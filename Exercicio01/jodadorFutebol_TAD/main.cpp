@@ -9,7 +9,11 @@ int main()
 {
     jogadorFutebol neymar;
 
-    neymar = inicializar("neymar", 90, 100, 150);
+    neymar = inicializar("Neymar", 90, 100, 150);
+
+    atribuiGol(&neymar, 10);
+
+    ehBom(90,100,150);
 
     print(neymar);
 
