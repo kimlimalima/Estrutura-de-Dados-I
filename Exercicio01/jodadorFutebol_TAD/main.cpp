@@ -13,8 +13,6 @@ int main()
 
     atribuiGol(&neymar, 10);
 
-    ehBom(90,100,150);
-
     print(neymar);
 
     return 0;
