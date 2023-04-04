@@ -43,7 +43,7 @@ void print(jogadorFutebol jogador)
     cout << "Jogos: " << jogador.jogos << "\n";
     cout << "Gols: " << jogador.gols << "\n";
     cout << "Assistencias: " << jogador.assistencias << "\n";
-    cout << "Qualidade: " << ehBom(jogador.jogos, jogador.gols,jogador.assistencias) << "\n";
+    cout << "Qualidade: " << ehBom(jogador.jogos, jogador.gols,jogador.assistencias) << "\n\n";
 }
 
 string ehBom(int jogos, int gols, int assistencias, double qualidade, string qualidadeJogador)

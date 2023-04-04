@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-using std::string;
+using std::cout, std::string;
 
 #include "jogadorFutebol.h"
 
@@ -15,5 +15,8 @@ int main()
 
     print(neymar);
 
+    atribuiGol(&neymar, 10);
+
+    print(neymar);
     return 0;
 }
