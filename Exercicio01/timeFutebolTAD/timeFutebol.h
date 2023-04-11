@@ -8,12 +8,18 @@ typedef struct
     int vitorias;
     int empates;
     int derrotas;
+    int pontosTime;
+    int pontosVitorias;
+    int pontosEmpate;
 
 }timeFutebol;
 
-timeFutebol inicializar(string, string, int, int, int);
+
+timeFutebol inicializar(string, string, int, int, int, int, int, int);
 
 void print(timeFutebol);
+
+int totalPontosTime(timeFutebol *, int, int, int, int, int);
 
 void setNomeTime(timeFutebol *, string);
 void setNomeTreinadorTime(timeFutebol *, string);

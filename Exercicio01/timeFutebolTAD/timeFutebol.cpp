@@ -7,7 +7,7 @@ using std::string;
 
 #include "timeFutebol.h"
 
-timeFutebol inicializar(string nomeTime, string nomeTreinadorTime, int vitorias, int empates, int derrotas)
+timeFutebol inicializar(string nomeTime, string nomeTreinadorTime, int vitorias, int empates, int derrotas,int pontosVitorias, int pontosEmpate, int pontosTime)
 {
     timeFutebol team;
 
@@ -16,8 +16,20 @@ timeFutebol inicializar(string nomeTime, string nomeTreinadorTime, int vitorias,
     team.vitorias = vitorias;
     team.empates = empates;
     team.derrotas = derrotas;
+    team.pontosTime = pontosTime;
+    team.pontosEmpate = pontosEmpate;
+    team.pontosVitorias = pontosVitorias;
 
     return  team;
+}
+
+int totalPontosTime(timeFutebol *team, int vitorias, int empates, int pontosVitorias, int pontosEmpate ,int pontosTime)
+{
+
+    while(vitorias>0){pontosTime+=3;}
+    while(empates>0){pontosTime+=1;}
+
+    return pontosTime;
 }
 
 void setNomeTime(timeFutebol *team, string nomeTime)
@@ -52,4 +64,5 @@ void print(timeFutebol team)
     cout << "Número de vitórias: " << team.vitorias << "\n";
     cout << "Número de empates: " << team.empates << "\n";
     cout << "Número de derrotas: " << team.derrotas << "\n";
+    cout << "Total Pontos: " << team.pontosTime << "\n";
 }

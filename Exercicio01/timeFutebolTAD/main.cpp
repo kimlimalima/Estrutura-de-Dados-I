@@ -9,10 +9,14 @@ using std::string;
 int main()
 {
     timeFutebol paysandu;
+    int vitorias = 10;
+    int empates = 10;
+    int derrotas = 0;
     
-    paysandu = inicializar("Paysandu", "Márcio Fernandes", 1000*1000, 0, 0);
+    paysandu = inicializar("Paysandu", "Márcio Fernandes", vitorias, empates, derrotas, 0, 0, 0);
 
     print(paysandu);
+    totalPontosTime(&paysandu, vitorias, empates, 0, 0, 0);
 
     return 0;
 }
