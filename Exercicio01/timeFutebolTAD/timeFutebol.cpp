@@ -22,7 +22,7 @@ timeFutebol inicializar(string nomeTime, string nomeTreinadorTime, int vitorias,
 
     return  team;
 }
-
+// Total de pontos
 int totalPontosTime(timeFutebol *team, int vitorias, int empates, int pontosVitorias, int pontosEmpate ,int pontosTime)
 {
 
