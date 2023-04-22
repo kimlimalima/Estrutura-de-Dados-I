@@ -6,7 +6,9 @@ using std::cin;
 
 bool ehVogal(char caractere)
 {
-    return (caractere == 'a' || caractere == 'e' || caractere =='i' || caractere =='o' || caractere =='u');
+    if (caractere == 'a' || caractere == 'e' || caractere =='i' || caractere =='o' || caractere =='u'){return true;}
+    if (caractere == 'A' || caractere == 'E' || caractere == 'I'|| caractere == 'O' || caractere == 'U'){ return true;}
+    return false;
 }
 
 int main()
