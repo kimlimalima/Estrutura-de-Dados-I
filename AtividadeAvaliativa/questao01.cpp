@@ -1,30 +1,25 @@
 #include <iostream>
 using std::cout;
-using std::cin;
 
-#include <string.h>
+#include <string>
+using std::string;
 
-bool ehVogal(char caractere)
+int ehVogal(string cadeiaCaractere)
 {
-    if (caractere == 'a' || caractere == 'e' || caractere =='i' || caractere =='o' || caractere =='u'){return true;}
-    if (caractere == 'A' || caractere == 'E' || caractere == 'I'|| caractere == 'O' || caractere == 'U'){ return true;}
-    return false;
+    int quantidadeVogais = 0;
+
+    for(int index=0; index<cadeiaCaractere.length(); index++)
+    {
+        char caractere = cadeiaCaractere[index];
+        if (caractere == 'a' || caractere == 'e' || caractere =='i' || caractere =='o' || caractere =='u'){quantidadeVogais++;}
+        if (caractere == 'A' || caractere == 'E' || caractere == 'I'|| caractere == 'O' || caractere == 'U'){quantidadeVogais++;}
+    }
+    return quantidadeVogais;
 }
+
 
 int main()
 {
-    char texto[50];
-    int quantidadeVogais = 0;
-    
-    cin.getline(texto, 50);
-
-    for(int index=0; index<strlen(texto); index++)
-    {
-        if(ehVogal(texto[index]) == true)
-        {
-            quantidadeVogais ++;
-        }
-    }
-    cout << "Quantidade de vogais: " << quantidadeVogais << "\n";
+    cout << "Quantidade de vogais: " << ehVogal("KimiA") << "\n";
     return 0;
 }
