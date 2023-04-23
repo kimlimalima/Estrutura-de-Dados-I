@@ -4,7 +4,7 @@ using std::cout;
 #include <string>
 using std::string;
 
-int ehVogal(string cadeiaCaractere)
+int quantidadeVogais(string cadeiaCaractere)
 {
     int quantidadeVogais = 0;
 
@@ -20,6 +20,6 @@ int ehVogal(string cadeiaCaractere)
 
 int main()
 {
-    cout << "Quantidade de vogais: " << ehVogal("KimiA") << "\n";
+    cout << "Quantidade de vogais: " << quantidadeVogais("KimiA") << "\n";
     return 0;
 }
