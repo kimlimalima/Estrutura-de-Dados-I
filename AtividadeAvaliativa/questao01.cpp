@@ -1,18 +1,15 @@
 #include <iostream>
-using std::cout;
-
 #include <string>
-using std::string;
 
-int quantidadeVogais(string cadeiaCaractere)
+int quantidadeVogais(std::string cadeiaCaracteres)
 {
     int quantidadeVogais = 0;
 
-    for(int index=0; index<cadeiaCaractere.length(); index++)
+    for(int index=0; index<cadeiaCaracteres.length(); index++)
     {
-        char caractere = cadeiaCaractere[index];
-        if (caractere == 'a' || caractere == 'e' || caractere =='i' || caractere =='o' || caractere =='u'){quantidadeVogais++;}
-        if (caractere == 'A' || caractere == 'E' || caractere == 'I'|| caractere == 'O' || caractere == 'U'){quantidadeVogais++;}
+        char caracter = cadeiaCaracteres[index];
+        if (caracter == 'a' || caracter == 'e' || caracter =='i' || caracter =='o' || caracter =='u'){quantidadeVogais++;}
+        if (caracter == 'A' || caracter == 'E' || caracter == 'I'|| caracter == 'O' || caracter == 'U'){quantidadeVogais++;}
     }
     return quantidadeVogais;
 }
@@ -20,6 +17,6 @@ int quantidadeVogais(string cadeiaCaractere)
 
 int main()
 {
-    cout << "Quantidade de vogais: " << quantidadeVogais("KimiA") << "\n";
+    std::cout << "Quantidade de vogais: " << quantidadeVogais("KimiA") << "\n";
     return 0;
 }
