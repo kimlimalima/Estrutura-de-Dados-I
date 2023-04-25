@@ -1,12 +1,14 @@
 #include <iostream>
+using std::cout;
+
 #include <string>
+using std::string;
 
 
-
-void segmentoString(std::string s, std::string t)
+void segmentoString(string s, string t)
 {
-    std::string maiorCadeia;
-    std::string menorCadeia;
+    string maiorCadeia;
+    string menorCadeia;
     
     if(s.length() > t.length() == true){maiorCadeia = s; menorCadeia = t;}
     else{maiorCadeia = t; menorCadeia = s;}
@@ -20,14 +22,14 @@ void segmentoString(std::string s, std::string t)
             segmento[index] = maiorCadeia[index];
             }
         }
-        std::cout << segmento;
     }
+    cout << segmento;
 }
 
 int main()
 {
-    std::string s = "jadhahdsajdsa";
-    std::string t = "wyqeruiweqrndaf";
+    string s = "jadhahdsajdsa";
+    string t = "wyqeruiweqrndaf";
 
     segmentoString(s, t);
 
