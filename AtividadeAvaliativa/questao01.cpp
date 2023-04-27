@@ -1,15 +1,15 @@
 #include <iostream>
 #include <string>
 
-int quantidadeVogais(std::string cadeiaCaracteres)
+int quantidadeVogais(char cadeiaCaracteres)
 {
     int quantidadeVogais = 0;
 
     for(int index=0; index<cadeiaCaracteres.length(); index++)
     {
-        char caracter = cadeiaCaracteres[index];
-        if (caracter == 'a' || caracter == 'e' || caracter =='i' || caracter =='o' || caracter =='u'){quantidadeVogais++;}
-        if (caracter == 'A' || caracter == 'E' || caracter == 'I'|| caracter == 'O' || caracter == 'U'){quantidadeVogais++;}
+        char letra = cadeiaCaracteres[index];
+        if (letra == 'a' || letra == 'e' || letra =='i' || letra =='o' || letra =='u'){quantidadeVogais++;}
+        if (letra == 'A' || letra == 'E' || letra == 'I'|| letra == 'O' || letra == 'U'){quantidadeVogais++;}
     }
     return quantidadeVogais;
 }

@@ -17,19 +17,19 @@ void segmentoString(string s, string t)
 
     for(int index = 0; index < maiorCadeia.length(); index++)
     {
-        if(maiorCadeia[index] == menorCadeia[index])
+        if(maiorCadeia[index] == menorCadeia[index] && maiorCadeia[index++] == menorCadeia[index++])
         {for(int index = 0; index < sizeof(segmento); index++) {
             segmento[index] = maiorCadeia[index];
             }
         }
     }
-    cout << segmento;
+    cout << segmento << "\n";
 }
 
 int main()
 {
-    string s = "jadhahdsajdsa";
-    string t = "wyqeruiweqrndaf";
+    string s = "ab";
+    string t = "ab";
 
     segmentoString(s, t);
 
