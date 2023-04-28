@@ -1,37 +1,66 @@
 #include <iostream>
 using std::cout;
 
-#include <string>
-using std::string;
-
-
-void segmentoString(string s, string t)
+int comprimento(char *cadeia)
 {
-    string maiorCadeia;
-    string menorCadeia;
+    int tamanho = 0;
     
-    if(s.length() > t.length() == true){maiorCadeia = s; menorCadeia = t;}
-    else{maiorCadeia = t; menorCadeia = s;}
+    for(int index = 0; cadeia[index] != '\0'; index++)
+        tamanho++;
+    return tamanho;
+}
 
-    char segmento[maiorCadeia.length()];
+bool segmento(char *s, char *t)
+{
+    if (comprimento(s) > comprimento(t))
+        return false;
 
-    for(int index = 0; index < maiorCadeia.length(); index++)
+    int indexT=0, indexS;
+    
+    while (t[indexT] != '\0')
     {
-        if(maiorCadeia[index] == menorCadeia[index] && maiorCadeia[index++] == menorCadeia[index++])
-        {for(int index = 0; index < sizeof(segmento); index++) {
-            segmento[index] = maiorCadeia[index];
-            }
+        indexS = 0;
+        while (s[indexS] != '\0' && t[indexT + indexS] == s[indexS])
+        {
+            indexS++;
         }
+        if (s[indexS] == '\0')
+            return true;
+        indexT++;
     }
-    cout << segmento << "\n";
+
+    return false;
+}
+
+int quantidadeOcorrencias(char *s, char *t) {
+    int quantidade = 0;
+    int indexT=0, indexS;
+
+    if (!segmento(s, t))
+    {
+        cout << s << " não é segmento de " << t << '\n';
+        return quantidade;
+    }
+
+    while (t[indexT] != '\0')
+    {
+        indexS = 0;
+        while (s[indexS] != '\0' && t[indexT + indexS] == s[indexS])
+        {
+            indexS++;
+        }
+        if (s[indexS] == '\0')
+            quantidade++;
+        indexT++;
+    }
+
+    cout << "Número de ocorrencias: ";
+    return quantidade;
 }
 
 int main()
 {
-    string s = "ab";
-    string t = "ab";
-
-    segmentoString(s, t);
-
-    return 0;
+    char s[] = "abc";
+    char t[] = "abcdabcd";
+    cout << quantidadeOcorrencias(s, t) << "\n";
 }
